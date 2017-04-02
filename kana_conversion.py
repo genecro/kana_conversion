@@ -1,7 +1,10 @@
 # -*- coding: UTF-8 -*-
 
 def hira2Kata(hiragana):
-	hiragana = hiragana.decode('utf-8')
+	try:
+		hiragana = hiragana.decode('utf-8')
+	except:
+		pass
 	katakana = ""
 	for kana in hiragana:
 		if ord(kana) >= ord("ぁ".decode('utf-8')) and ord(kana) <= ord("ゖ".decode('utf-8')):
@@ -11,7 +14,10 @@ def hira2Kata(hiragana):
 	return katakana
 
 def kata2Hira(katakana):
-	katakana = katakana.decode('utf-8')
+	try:
+		katakana = katakana.decode('utf-8')
+	except:
+		pass
 	hiragana = ""
 	for kana in katakana:
 		if ord(kana) >= ord("ァ".decode('utf-8')) and ord(kana) <= ord("ヶ".decode('utf-8')):
